@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-4">
+    <div class="list-group">
+      <a
+        [routerLink]="['/servers', server.id]"
+        [queryParams]="{ allowEdit: server.id === 3 ? '1' : '0' }"
+        [fragment]="'loading'"
+        class="list-group-item"
+        *ngFor="let server of servers"
+      >
+        {{ server.name }}
+      </a>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <router-outlet></router-outlet>
+
+    <!-- <a routerLink="/servers">Reload Page</a>
+    <h2>App Edit Server</h2>
+    <button class="btn btn-primary" (click)="onReloadComponent()">
+      RELOAD COMPONENT
+    </button>
+    <button class="btn btn-primary" (click)="onReloadPage()">
+      RELOAD PAGE
+    </button> -->
+
+    <!-- <app-edit-server></app-edit-server> -->
+    <hr />
+    <!-- <h2>App Server</h2> -->
+    <!-- <app-server></app-server> -->
+  </div>
+</div>

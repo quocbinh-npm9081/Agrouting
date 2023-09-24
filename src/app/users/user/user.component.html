@@ -1,0 +1,17 @@
+<h2>App User</h2>
+<p>User with ID _ID_ loaded.{{ user.id }}</p>
+<p>User name is _NAME_ {{ user.name }}</p>
+<hr />
+
+<!-- <a [routerLink]="['/users', 10, 'BinhDepTrai']" >URL Load BinhDepTrai (10)</a> -->
+<hr />
+<a
+  [routerLink]="['/users', 18, 'AnDepTrai']"
+  [queryParams]="{ allowEdit: '18' }"
+  [fragment]="'loading'"
+  >URL Load AnDepTrai (10)</a
+>
+<hr />
+
+<!-- <a routerLink="/users/{{ user.id }}/{{ user.name }}">URL Load An (2) </a> -->
+<a routerLink="/users/13/chau">URL Load Chau (1) </a>
